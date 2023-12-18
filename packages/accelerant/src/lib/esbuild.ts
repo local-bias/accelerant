@@ -3,8 +3,8 @@ import chalk from 'chalk';
 import esbuild from 'esbuild';
 import { join } from 'path';
 import readline from 'readline';
-import sassPlugin from './esbuild-sass-plugin';
-import { TEMPORARY_DIRECTORY_NAME } from './consts';
+import sassPlugin from './esbuild-sass-plugin.js';
+import { TEMPORARY_DIRECTORY_NAME } from './consts.js';
 
 export const buildWithEsbuild = async () => {
   const srcRoot = 'src';

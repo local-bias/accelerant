@@ -1,7 +1,7 @@
 //@ts-check
 import { exec } from 'child_process';
 import { config } from 'dotenv';
-import { TEMPORARY_DIRECTORY_NAME } from './consts';
+import { TEMPORARY_DIRECTORY_NAME } from './consts.js';
 config();
 
 export default () => {

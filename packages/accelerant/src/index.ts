@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 import { Command } from 'commander';
-import dev from './dev';
-import build from './build';
+import dev from './dev.js';
+import build from './build.js';
 
 export type CommandOptions = {
   config?: string;

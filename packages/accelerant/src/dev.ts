@@ -1,9 +1,8 @@
 import { CommandOptions } from '.';
-import { join } from 'path';
-import { importConfig } from './lib/import-config';
-import { buildWithEsbuild } from './lib/esbuild';
-import upload from './lib/upload';
-import { createPluginManifest } from './lib/create-plugin-manifest';
+import { importConfig } from './lib/import-config.js';
+import { buildWithEsbuild } from './lib/esbuild.js';
+import upload from './lib/upload.js';
+import { createPluginManifest } from './lib/create-plugin-manifest.js';
 
 export default async (_: string, options: CommandOptions) => {
   const { config } = options;

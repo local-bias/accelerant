@@ -1,8 +1,8 @@
 //@ts-check
 import { writeFileSync } from 'fs';
 import path from 'path';
-import { TEMPORARY_DIRECTORY_NAME } from './consts';
-import { AccelerantConfig } from '../types/config';
+import { TEMPORARY_DIRECTORY_NAME } from './consts.js';
+import { AccelerantConfig } from '../types/config.js';
 
 const merged = (src: any, dst: any): any => {
   return Object.entries(src).reduce((acc, [key, value]) => {
