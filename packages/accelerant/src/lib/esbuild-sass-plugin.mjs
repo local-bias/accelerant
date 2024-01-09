@@ -1,10 +1,11 @@
+//@ts-check
 import { compile } from 'sass';
 import { resolve } from 'path';
-import { Plugin } from 'esbuild';
 
 const pluginName = 'esbuild-plugin-sass';
 
-const plugin: Plugin = {
+/** @type { import("esbuild").Plugin } */
+const plugin = {
   name: pluginName,
   setup(build) {
     build.onResolve({ filter: /\.s[ac]ss$/ }, (args) => ({

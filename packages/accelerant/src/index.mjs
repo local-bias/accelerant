@@ -1,12 +1,9 @@
 #!/usr/bin/env node
 
+//@ts-check
 import { Command } from 'commander';
-import dev from './dev.js';
-import build from './build.js';
-
-export type CommandOptions = {
-  config?: string;
-};
+import dev from './dev.mjs';
+import build from './build.mjs';
 
 const program = new Command();
 
