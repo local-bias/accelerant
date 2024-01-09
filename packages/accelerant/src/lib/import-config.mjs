@@ -21,7 +21,7 @@ export const importConfig = async (configFilePath = DEFAULT_PLUGIN_CONFIG_FILE_N
   } catch (error) {
     console.error(error);
     throw new Error(
-      'プラグインの設定ファイルが見つかりませんでした。デフォルトでプロジェクトルートに「plugin.config.mjs」を配置してください。設定ファイルのパスは「--config」オプションで指定できます。'
+      'プラグインの設定ファイルが見つかりませんでした。プロジェクトルートに「plugin.config.mjs」を配置してください。設定ファイルのパスは「--config」オプションで指定できます。'
     );
   }
 };
