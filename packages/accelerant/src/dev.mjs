@@ -3,6 +3,7 @@ import { importConfig } from './lib/import-config.mjs';
 import { buildWithEsbuild } from './lib/esbuild.mjs';
 import upload from './lib/upload.mjs';
 import { createPluginManifest } from './lib/create-plugin-manifest.mjs';
+import { watchCss } from './tailwindcss/dev.mjs';
 
 /**
  * 非同期でデフォルトのエクスポート関数を実行します。
@@ -18,11 +19,7 @@ export default async (_, options) => {
 
   await createPluginManifest({ config: pluginConfig, env: 'dev' });
 
-  await Promise.all([
-    buildWithEsbuild(),
-    //  tailwindcss(),
-    upload(),
-  ]);
+  await Promise.all([buildWithEsbuild(), watchCss(), upload()]);
 
   console.log('dev');
 };

@@ -29,7 +29,7 @@ export const buildWithEsbuild = async () => {
 
             console.log(
               chalk.hex('#d1d5db')(`${new Date().toLocaleTimeString()} `) +
-                chalk.cyan(`[content] `) +
+                chalk.cyan(`[js] `) +
                 `変更を反映しました`
             );
           }),
